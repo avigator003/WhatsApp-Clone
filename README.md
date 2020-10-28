@@ -1,4 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+LIVE DEMO :https://watsapp-clone-2e78a.web.app/
+
+Basically This is a mini Version of Whatsapp Where you can login with the help of OAuth(Google Account) and You Are Redirected to the Home Page.Here You Can Create a Room And Chat With Other Peoples.All Rooms Are Visible to All the peoples using this mini Version 
 
 ## Available Scripts
 
