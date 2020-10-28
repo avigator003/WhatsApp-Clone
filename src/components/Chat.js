@@ -1,8 +1,9 @@
-import { Avatar, IconButton } from '@material-ui/core'
+import { Avatar, Button, IconButton } from '@material-ui/core'
 import { AttachFile, InsertEmoticon, Mic, MoreVert, SearchOutlined } from '@material-ui/icons'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import db from '../firebase';
+import auth from '../firebase'
 import "./Chat.css"
 import firebase from 'firebase'
 import { useStateValue } from '../StateProvider';
@@ -38,6 +39,11 @@ function Chat() {
 
        setMessage(""); 
  }
+
+ const signout=()=>{
+   firebase.auth().signOut();
+   alert("logout successful");
+ }
     return (
         <div className="chat">
          <div className="chat__header">
@@ -59,9 +65,7 @@ function Chat() {
         <IconButton>     
           <AttachFile/>
         </IconButton>
-        <IconButton>     
-          <MoreVert/>
-       </IconButton>
+       <Button onClick={signout}>Logout</Button>
         </div>
          </div>
  
